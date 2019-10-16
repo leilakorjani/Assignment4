@@ -1,15 +1,15 @@
 document.addEventListener('keyup', keyIHandler);
 function keyIHandler (event){
     let myImage = document.getElementById("myImg")
-    if((myImage.width > 0 && myImage.width < 50) && (event.code == 'KeyI')){
-        myImage.width += 10;
+    if((myImage.width > 25 && myImage.width < 60) && (event.code == 'KeyI')){
         myImage.height += 10;
-    }else if((myImage.width == 50) && (event.code == 'KeyI')){
+        myImage.width += 10;
+      
+    }else if((myImage.width == 60) && (event.code == 'KeyI')){
         myImage.width += 10;
         myImage.height += 10;
         myImage.src = "image/explosion.png";
     }else if ((myImage.width > 60) && (event.code == 'KeyI')){
-        // alert('remove')
         document.removeEventListener("keyup", keyIHandler, true);
     }
 }
@@ -19,7 +19,7 @@ function keyDHandler(event){
     let myImage = document.getElementById("myImg")
     if((myImage.width > 10 && myImage.width <60) && (event.code == 'KeyD')){
         myImage.width -= 10;
-        myImage.height -= 10;
+        // myImage.height -= 10;
     }else if((myImage.width == 10) && (event.code == 'KeyD')){
         myImage.width -= 10;
         myImage.height -= 10;
