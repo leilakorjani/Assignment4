@@ -1,6 +1,6 @@
-document.addEventListener('keyup', keyIHandler);
+document.addEventListener('keyup', keyHandler);
 
-function keyIHandler (event){
+function keyHandler (event){
     let myEmoji = document.getElementById("balloonEmoji"); 
     let emojiSize = window.getComputedStyle(document.getElementById("balloonEmoji")).fontSize;
     let emojiSizeNum = parseInt(emojiSize, 10);
@@ -24,7 +24,7 @@ function keyIHandler (event){
         myEmoji.style.fontSize = `${emojiSizeNum}px` ;
     }
     if ((emojiSizeNum <= 5) || (emojiSizeNum >= 60)){
-        document.removeEventListener("keyup", keyIHandler, true); 
+        document.removeEventListener("keyup", keyHandler, true); 
 
     } 
 }
